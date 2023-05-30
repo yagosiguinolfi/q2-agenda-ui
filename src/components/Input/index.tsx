@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, View, Image, ImageRequireSource } from 'react-native';
+import { TextInput, View, Image } from 'react-native';
 import styles from './styles';
 
 const userIcon = require('../../assets/icons/user-grey.png');

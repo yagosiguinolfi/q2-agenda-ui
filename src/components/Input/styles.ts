@@ -7,8 +7,8 @@ export default StyleSheet.create({
     width: '100%',
     padding: 10,
     borderWidth: 1,
-    borderTopEndRadius: 8,
-    borderBottomEndRadius: 8,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 8,
     borderLeftWidth: 0,
     borderColor: colors.grey,
   },
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     borderColor: colors.grey, 
     width: 40, 
     height: 40, 
-    borderTopStartRadius: 8,
-    borderBottomStartRadius: 8 
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8 
   }
 })
