@@ -6,6 +6,11 @@ import { ExpoConfig } from 'expo/config';
 const config: ExpoConfig = {
   name: 'q2-agenda-ui-app',
   slug: 'q2-agenda-ui-app',
+  extra: {
+    eas: {
+      projectId: "9f594bcd-c567-4aeb-97ca-40b59d68c455"
+    }
+  }
 };
 
 export default config;
