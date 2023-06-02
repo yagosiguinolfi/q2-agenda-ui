@@ -1,25 +1,32 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import colors from '../../utils/colors';
 
-export default StyleSheet.create({  
+export default StyleSheet.create({
+  viewInput: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 5,
+    borderWidth: 1,	
+    borderRadius: 8,
+    borderColor: colors.gray,
+  },
   input: {
+    flex: 1,
     height: 40,
-    width: '100%',
-    padding: 10,
-    borderWidth: 1,
-    borderTopRightRadius: 8,
-    borderBottomRightRadius: 8,
-    borderLeftWidth: 0,
-    borderColor: colors.grey,
+    padding: 10,  
+    color: colors.black
+  },
+  inputNoIcon: {
+    borderLeftWidth: 1,
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8,
   },
   viewIcon: {
     alignItems: 'center', 
     justifyContent: 'center', 
-    borderWidth: 1, 
-    borderColor: colors.grey, 
+    borderRightWidth: 1, 
+    borderRightColor: colors.gray, 
     width: 40, 
-    height: 40, 
-    borderTopLeftRadius: 8,
-    borderBottomLeftRadius: 8 
+    height: 40
   }
 })

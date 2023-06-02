@@ -1,24 +1,30 @@
 import React from 'react';
-import { TextInput, View, Image } from 'react-native';
+import { TextInput, View } from 'react-native';
 import styles from './styles';
-
-const userIcon = require('../../assets/icons/user-grey.png');
-const passIcon = require('../../assets/icons/pass-grey.png');
+import Ionicons from '@expo/vector-icons/Ionicons';
+import colors from '../../utils/colors';
 
 export default function Input(props) {
-  const icons = {
-    username: userIcon,
-    password: passIcon
-  }
-  return <View style={{ flexDirection: 'row', marginVertical: 5 }}>
-    {props.name ?
+
+  return <View style={[styles.viewInput, props.style]}>
+    {props.icon ?
       <View style={styles.viewIcon}>
-        <Image source={icons[props.name]} resizeMode='contain' />
+        <Ionicons name={props.icon} color={colors.gray} size={20} />
       </View>
       : <></>}
     <TextInput
-      {...props}
-      style={styles.input}
+      value={props.value}
+      editable={!props.mode}
+      keyboardType={props.mode === 'date' || props.mode === 'time' ? 'numeric' : 'default'}
+      placeholder={props.placeholder}
+      style={[styles.input, !props.icon && styles.inputNoIcon, props.textStyle]}
+      onChangeText={props.onChangeText}
+      secureTextEntry={props.secureTextEntry}
     />
+    {props.mode && (
+      <View style={{ paddingHorizontal: 5 }}>
+        <Ionicons name="create-outline" color={colors.gray} size={24} onPress={props.onPress} />
+      </View>
+    )}
   </View>;
 }

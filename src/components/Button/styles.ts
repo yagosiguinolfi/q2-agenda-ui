@@ -15,9 +15,9 @@ export default StyleSheet.create({
     justifyContent: "center",
     padding: 10,
     gap: 10,
+    elevation: 2,
     borderRadius: 8,
     backgroundColor: colors.blue,
-    width: 200,
     height: 50
   }
 });
